@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Météo HitRadio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Météo HitRadio</h1>
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Rechercher une ville..." />
+        <button type="submit"><i class='bx bx-search'></i></button>
+      </form>
+    </header>
+
+    <section class="weather-current card">
+      <h2 id="city-name"></h2>
+      <div class="weather-info">
+        <i id="weather-icon" class=""></i>
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <div class="weather-details">
+          <p id="humidity">Humidité : <span></span></p>
+          <p id="wind-speed">Vent : <span></span></p>
+          <p id="pressure">Pression : <span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="weather-hourly card">
+      <h3>Prévisions horaires</h3>
+      <div id="hourly-forecast" class="forecast-grid">
+        </div>
+    </section>
+
+    <section class="weather-daily card">
+      <h3>Prévisions sur plusieurs jours</h3>
+      <div id="daily-forecast" class="forecast-grid">
+        </div>
+    </section>
+  </div>
+
+  <div id="weather-alerts" class="alert-box"></div>
+  <audio id="alert-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-classic-alarm-995.mp3" preload="auto"></audio>
+
+  <div class="fixed-buttons">
+    <button id="toggle-unit"><i class='bx bx-radio-circle'></i></button>
+    <button id="toggle-theme"><i class='bx bxs-moon' ></i></button>
+  </div>
+  
+  <footer class="footer">
+    <p>Données météo fournies par <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
