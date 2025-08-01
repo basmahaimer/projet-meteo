@@ -422,3 +422,17 @@ body.dark-mode .footer a {
     font-size: 1.5rem;
   }
 }
+.chart-container {
+    position: relative;
+    width: 80%; /* La largeur du conteneur */
+    height: 300px; /* La hauteur du conteneur */
+    margin: 20px auto; /* Pour le centrer */
+}
+
+/* Média query pour les petits écrans (téléphones) */
+@media (max-width: 600px) {
+    .chart-container {
+        width: 95%; /* Prend presque toute la largeur sur mobile */
+        height: 250px; /* Une hauteur un peu plus petite */
+    }
+}
